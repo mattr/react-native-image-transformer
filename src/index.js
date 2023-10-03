@@ -1,6 +1,7 @@
 import React from "react";
-import { View, Text, Image, ViewPropTypes, Dimensions } from "react-native";
+import { View, Text, Image, Dimensions } from "react-native";
 import PropTypes from "prop-types";
+import { ViewPropTypes } from "deprecated-react-native-prop-types";
 import ViewTransformer from "react-native-easy-view-transformer";
 
 export default class ImageTransformer extends React.Component {
@@ -13,9 +14,7 @@ export default class ImageTransformer extends React.Component {
             })
         }).isRequired,
         index: PropTypes.number,
-        style: ViewPropTypes
-            ? ViewPropTypes.style
-            : View.propTypes.style,
+        style: ViewPropTypes.style,
         onLoad: PropTypes.func,
         onLoadStart: PropTypes.func,
         enableTransform: PropTypes.bool,
